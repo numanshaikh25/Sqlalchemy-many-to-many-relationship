@@ -27,6 +27,5 @@ class Project(Base):
 
 class ProjectMembers(Base):
     __tablename__ = "project_members"
-    id
     project_id = Column(Integer, ForeignKey("projects.id"), primary_key=True)
     user_id = Column(Integer, ForeignKey("users.id"), primary_key=True)
